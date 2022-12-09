@@ -43,4 +43,6 @@ Thank you for considering contributing to the Laravel framework! The contributio
 - ** 
 ## Artisan command
 
-- **php artisan make:model Category -mcr -R
+- **php artisan make:model [NameModel] -mcr -R
+- **composer require laravel/ui
+- **php artisan ui bootstrap --auth
