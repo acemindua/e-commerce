@@ -40,9 +40,11 @@ Thank you for considering contributing to the Laravel framework! The contributio
 
 ### Links
 
+- [Laravel-permission](https://spatie.be/docs/laravel-permission/v5/introduction)
+
 - ** 
 ## Artisan command
 
-- **php artisan make:model [NameModel] -mcr -R
-- **composer require laravel/ui
-- **php artisan ui bootstrap --auth
+- **php artisan make:model [NameModel] -mcr -R**
+- **composer require laravel/ui**
+- **php artisan ui bootstrap --auth**
