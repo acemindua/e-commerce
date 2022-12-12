@@ -3,6 +3,7 @@
 ### Links
 
 - [Laravel-permission](https://spatie.be/docs/laravel-permission/v5/introduction)
+- [Laravel Review Rateable](https://github.com/codebyray/laravel-review-rateable)
 
 ## Artisan command
 

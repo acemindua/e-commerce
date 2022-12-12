@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,5 +22,12 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
+Route::group([
+    'prefix' => 'admin',
+    'namespace'=>'Admin',
+    'middleware' => ['auth', 'role:super-user|admin']
+    ], function () {
+    
+    Route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, 'dashboard'])->name('dashboard');
+});
 
