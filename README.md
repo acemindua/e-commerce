@@ -10,3 +10,4 @@
 - **php artisan make:model [NameModel] -mcr -R**
 - **composer require laravel/ui**
 - **php artisan ui bootstrap --auth**
+- ** **
