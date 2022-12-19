@@ -24,10 +24,23 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::group([
     'prefix' => 'admin',
-    'namespace'=>'Admin',
     'middleware' => ['auth', 'role:super-user|admin']
     ], function () {
     
     Route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, 'dashboard'])->name('dashboard');
+    
+    /** Catalog */
+
+    // Brands
+    Route::resource('/catalog/brands', App\Http\Controllers\Admin\BrandController::class);
+    // Categories
+    Route::resource('/catalog/categories', App\Http\Controllers\Admin\CategoryController::class);
+    // Tags
+    Route::resource('/catalog/tags', App\Http\Controllers\Admin\TagController::class);
+    // Products
+    Route::resource('/catalog/products', App\Http\Controllers\Admin\ProductController::class);
+
+    /** Users */
+    Route::resource('/users', App\Http\Controllers\Admin\UserController::class);
 });
 

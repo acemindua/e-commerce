@@ -4,6 +4,7 @@
 
 - [Laravel-permission](https://spatie.be/docs/laravel-permission/v5/introduction)
 - [Laravel Review Rateable](https://github.com/codebyray/laravel-review-rateable)
+- [Laravel Breadcrumbs](https://packagist.org/packages/diglactic/laravel-breadcrumbs)
 
 ## Artisan command
 
