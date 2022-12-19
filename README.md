@@ -5,6 +5,7 @@
 - [Laravel-permission](https://spatie.be/docs/laravel-permission/v5/introduction)
 - [Laravel Review Rateable](https://github.com/codebyray/laravel-review-rateable)
 - [Laravel Breadcrumbs](https://packagist.org/packages/diglactic/laravel-breadcrumbs)
+- [jQuery DataTables API](https://github.com/yajra/laravel-datatables)
 
 ## Artisan command
 

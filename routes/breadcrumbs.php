@@ -19,3 +19,33 @@ Breadcrumbs::for('users.index', function ($trail) {
     $trail->parent('dashboard');
     $trail->push(__('Users'), route('users.index'));
 });
+
+// Roles
+Breadcrumbs::for('roles.index', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push(__('Roles'), route('roles.index'));
+});
+
+// Catalog->Products
+Breadcrumbs::for('products.index', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push(__('Products'), route('products.index'));
+});
+
+// Catalog->Categories
+Breadcrumbs::for('categories.index', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push(__('Categories'), route('categories.index'));
+});
+
+// Catalog->Brands
+Breadcrumbs::for('brands.index', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push(__('Brands'), route('brands.index'));
+});
+
+// Catalog->Tags
+Breadcrumbs::for('tags.index', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push(__('Tags'), route('tags.index'));
+});

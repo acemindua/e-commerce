@@ -42,5 +42,6 @@ Route::group([
 
     /** Users */
     Route::resource('/users', App\Http\Controllers\Admin\UserController::class);
+    Route::resource('/roles', App\Http\Controllers\Admin\RoleController::class);
 });
 

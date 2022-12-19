@@ -12839,7 +12839,7 @@ textarea.form-control-lg {
   }
 }
 :root {
-    --bg-default: rgb(250, 250, 250);
+    --bg-default: rgb(244, 246, 247);
     --text-color: rgb(28, 40, 51);
 }
 
@@ -12879,45 +12879,72 @@ body {
     text-decoration: none;
   }
 
+  table.table thead tr th {
+    background-color: rgb(247, 249, 249);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: rgb(39, 55, 70);
+    font-weight: 200;
+  }
+
+  .card {
+    border-radius: 3px;
+  }
+  .card {
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  }
+  /** Sidebar */
   #sidebar {
-    background-color: rgb(246, 244, 245);
+    background-color: rgb(251, 252, 252);
     width: 200px;
     min-height: 100vh;
     padding: 0;
     margin: 0;
   }
-
   #sidebar ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    transition: all .1s linear;
   }
-
   #sidebar .menu ul li {
     border-top: 1px solid #ddd;
     line-height: 40px;
   }
-
   #sidebar a {
     display: block;
     color: rgb(44, 62, 80);
-    font-size: 0.9em;
     padding: 0 20px;
     font-weight: bold;
   }
-
   #sidebar .menu ul li span {
     padding: 0 7px;
+    text-transform: uppercase;
+    font-size: 0.8em;
   }
-
   #sidebar .menu ul li:last-child {
     border-bottom: 1px solid #ddd;
   }
-
+  #sidebar .menu ul li ul.sub-menu {
+    transition: all .1s linear;
+  }
+  #sidebar .menu ul li ul.sub-menu li {
+    background-color: rgb(255, 255, 255);
+  }
   #sidebar .menu ul li ul.sub-menu li:last-child {
     border-bottom: 0;
   }
+  #sidebar .menu ul li.active {
+    background-color: rgb(255, 255, 255);
+  }
+  #sidebar .menu ul li ul.sub-menu li.active {
+    background-color: rgb(248, 249, 249);
+  }
+  #sidebar .menu ul li ul.sub-menu li span {
+    text-transform: capitalize;
+    font-size: 0.9em;
+  }
+
 
   /*
 

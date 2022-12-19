@@ -16,10 +16,12 @@
       <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 	   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+      @stack('styles')
+
       <!-- Styles -->
       <link href="{{ mix('css/admin/admin.css') }}" rel="stylesheet">
 
-      @stack('styles')
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
       <!-- Scripts -->
       <script src="{{ mix('js/admin/admin.js') }}" defer></script>
@@ -37,11 +39,15 @@
 
                <main class="col">
 
-                  <h1>{{ ($breadcrumb = Breadcrumbs::current()) ? $breadcrumb->title : '' }}</h1>
+                  <div class="container">
+                     <h1>{{ ($breadcrumb = Breadcrumbs::current()) ? $breadcrumb->title : '' }}</h1>
 
-                  {{ Breadcrumbs::render() }}
+                     {{ Breadcrumbs::render() }}
 
-                  @yield('content')
+                     @yield('content')
+                  </div>
+
+                  
 
                </main>
 

@@ -8,6 +8,37 @@ use Illuminate\Support\Str;
 class UserFactory extends Factory
 {
     /**
+     * Indicate that the user.
+     *
+     * @return Factory
+     */
+    public function user(): UserFactory
+    {
+        return $this->assignRole('user');
+    }
+
+    /**
+     * Configure the model factory.
+     *
+     * @return $this
+     */
+    public function configure()
+    {
+        return $this->afterMaking(function (\App\Models\User $user) {
+            return $user->assignRole('user');
+        });
+    }
+
+    /**
+     * @param array|\Spatie\Permission\Contracts\Role|string  ...$roles
+     * @return UserFactory
+     */
+    private function assignRole(...$roles): UserFactory
+    {
+        return $this->afterCreating(fn(\App\Models\User $user) => $user->syncRoles($roles));
+    }
+
+    /**
      * Define the model's default state.
      *
      * @return array
