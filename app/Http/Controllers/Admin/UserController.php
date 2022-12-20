@@ -43,6 +43,11 @@ class UserController extends Controller
                     $id = sprintf("%04d", $data->id);
                     return $id;
                 })
+                ->addColumn('image', function($data){ 
+                    $html = '<img src="/images/no-ava-user.jpg" width="40px" alt="'. $data->name .'" class="img-thumbnail" width="60px" />';
+
+                    return $html;
+                })
                 ->addColumn('role', function($data){ 
                     $role = $data->roles->first()->name;
 
@@ -53,18 +58,18 @@ class UserController extends Controller
                     return 'Check Email';
                 })
                 ->editColumn('created_at', function($data){ 
-                    $formatedDate = Carbon::createFromFormat('Y-m-d H:i:s', $data->created_at)->format('d.m.Y'); 
+                    $formatedDate = Carbon::createFromFormat('Y-m-d H:i:s', $data->created_at)->format('d/m/y'); 
                     return $formatedDate; 
                 })
                 ->addColumn('action', function($data){
-                    $html = '<div class="d-flex gap-3">';
+                    $html = '<div class="d-flex gap-3 justify-content-center">';
                     $html .= '<a href="'.route('users.show', $data->id).'" class="show"><i class="fa fa-eye"></i> Show</a>';
                     $html .= '<a href="'.route('users.edit', $data->id).'" class="edit"><i class="fa fa-edit"></i> Edit</a>';
                     $html .= '<a href="javascript:void(0)" onclick="confirm('. $data->id .')" class="delete"><i class="fa fa-trash-o"></i> Delete</a>';
                     $html .= '</div>';
                     return $html;
                 })
-                ->rawColumns(['id', 'role', 'status', 'created_at', 'action'])
+                ->rawColumns(['id', 'image', 'role', 'status', 'created_at', 'action'])
                 ->make(true);
         };
 
@@ -80,6 +85,7 @@ class UserController extends Controller
     public function create()
     {
         //
+        abort(404);
     }
 
     /**
@@ -91,6 +97,7 @@ class UserController extends Controller
     public function store(StoreUserRequest $request)
     {
         //
+        abort(404);
     }
 
     /**
@@ -102,6 +109,7 @@ class UserController extends Controller
     public function show(User $user)
     {
         //
+        abort(404);
     }
 
     /**
@@ -113,6 +121,7 @@ class UserController extends Controller
     public function edit(User $user)
     {
         //
+        abort(404);
     }
 
     /**
@@ -125,6 +134,7 @@ class UserController extends Controller
     public function update(UpdateUserRequest $request, User $user)
     {
         //
+        abort(404);
     }
 
     /**
@@ -136,5 +146,6 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         //
+        abort(404);
     }
 }

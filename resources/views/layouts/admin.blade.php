@@ -38,16 +38,17 @@
                <x-admin.navbar />
 
                <main class="col">
-
+                     
                   <div class="container">
-                     <h1>{{ ($breadcrumb = Breadcrumbs::current()) ? $breadcrumb->title : '' }}</h1>
 
-                     {{ Breadcrumbs::render() }}
+                     <div class="d-flex justify-content-between mt-4 mb-3">
+                        <h1 class="fs-3 text-muted">{{ ($breadcrumb = Breadcrumbs::current()) ? $breadcrumb->title : '' }}</h1>
+
+                        {{ Breadcrumbs::render() }}
+                     </div>
 
                      @yield('content')
-                  </div>
-
-                  
+                  </div>     
 
                </main>
 

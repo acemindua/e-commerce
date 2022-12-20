@@ -8,20 +8,22 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-        
+        <div class="table-responsive">
             <table class="table data-table">
                 <thead>
                     <tr>
                         <th>ID</th>
+                        <th>IMG</th>
                         <th>{{ __('Name') }}</th>
                         <th>{{ __('Role') }}</th>
                         <th>{{ __('Status') }}</th>
                         <th>{{ __('Data Registration') }}</th>
-                        <th></th>
+                        <th class="text-center" width="200px"><i class="bi bi-gear"></i></th>
                     </tr>
                 </thead>
                 <tbody></tbody>
             </table>
+        </div>
        
     </div>
 </div>
@@ -49,6 +51,7 @@
                 ajax: "{{ route('users.index') }}",
                 columns: [
                     {data: 'id', name: 'id'},
+                    {data: 'image', name: 'image'},
                     {data: 'name', name: 'name'},
                     {data: 'role', name: 'role'},
                     {data: 'status', name: 'status'},

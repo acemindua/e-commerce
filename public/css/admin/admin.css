@@ -12859,10 +12859,6 @@ html, body {
 html {
   font-family: sans-serif;
   line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -12877,6 +12873,7 @@ body {
 
   a {
     text-decoration: none;
+    color: rgb(24, 26, 28);
   }
 
   table.table thead tr th {
@@ -12886,6 +12883,9 @@ body {
     color: rgb(39, 55, 70);
     font-weight: 200;
   }
+  table.table td {
+    vertical-align: middle;
+  }
 
   .card {
     border-radius: 3px;
@@ -12894,6 +12894,19 @@ body {
     border: 0;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   }
+
+  .show .fa {
+    color: green;
+  }
+
+  .edit .fa {
+    color: blue;
+  }
+
+  .delete .fa {
+    color: red;
+  }
+
   /** Sidebar */
   #sidebar {
     background-color: rgb(251, 252, 252);

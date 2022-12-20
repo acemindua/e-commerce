@@ -46,12 +46,14 @@
             <span>{{ __('Users') }}</span> 
             </a>
          </li>
+         @role('super-user')
          <li class="{{ (request()->is('admin/roles*')) ? 'active' : '' }}">
             <a href="{{ route('roles.index') }}">
             <i class="bi bi-shield"></i>
             <span>{{ __('Roles') }}</span> 
             </a>
          </li>
+         @endrole
       </ul>
    </nav>
 </aside>
